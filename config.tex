@@ -1,0 +1,104 @@
+\documentclass[11pt, a4paper, titlepage]{article}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[greek,english]{babel}
+\usepackage{graphicx}
+\usepackage{titlepic}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{float}
+% \usepackage{subfig}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{siunitx}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{tikz} % Drawing Shapes
+% \usepackage{indentfirst}
+% \usepackage{parskip}
+\usepackage[labelfont=bf]{caption}
+
+
+
+% Citing
+\usepackage{cite}
+
+\setmainfont{Charter}
+% \setlength{\parindent}{0pt} % Uncomment for no paragraph indent
+\raggedbottom
+
+% Program text
+\usepackage{xcolor}
+\definecolor{mygray}{HTML}{333333}
+\newcommand{\code}[1]{\texttt{\color{mygray}#1}}
+
+% English and Greek
+\newcommand{\en}{\selectlanguage{english}}
+\newcommand{\gr}{\selectlanguage{greek}}
+\hypersetup{
+	colorlinks=true,
+	linktoc=all,
+	linkcolor=black
+}
+
+% For Code
+\usepackage{listings}
+\usepackage{xcolor}
+\renewcommand\lstlistingname{Source Code}
+\renewcommand\lstlistlistingname{Source Code}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\captionsetup[lstlisting]{labelfont=bf}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    escapeinside={(*@}{@*)}, % To escape in code use (*@{\textbf{Code}}@*)
+}
+\lstset{style=mystyle}
+
+% For Q&A
+\newenvironment{qanda}{\setlength{\parindent}{0pt}}{\bigskip}
+\newcommand{\Q}{\bigskip\bfseries E: }
+\newcommand{\A}{\par\textbf{A:} \normalfont\indent}
+
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    citecolor=black,      
+    urlcolor=blue,
+    pdftitle={An Example},
+    pdfpagemode=FullScreen
+}
+\urlstyle{same}
+
+% Subfigure numbering is (i), (ii), (iii)...
+\renewcommand\thesubfigure{\roman{subfigure}}
+\captionsetup{subrefformat=parens}
+\renewcommand{\figurename}{Fig.}
